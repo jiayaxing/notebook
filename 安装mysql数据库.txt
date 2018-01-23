@@ -1,0 +1,55 @@
+  yum list installed|grep mysql   查看是否安装了mysql
+  yum remove mysql-libs.x86_64    移除已经安装的mysql
+  yum list installed|grep mysql   
+  yum -y install mysql-server mysql mysql-devel  安装mysql
+
+  vi /etc/my.cnf 加入default-character-set=utf8
+
+  # service mysqld start  启动mysql
+  # mysqladmin -u root password 'Pass12345' 启动后给root用户设置密码
+  # mysql -u root -p  用root用户登陆mysql
+
+  show databases;
+  use mysql;
+  show tables;
+  select * from user;
+  select password from user;
+  select user,password from user;
+  select host,user from user;
+  UPDATE user SET `Host` = '%' WHERE `User` = 'root' LIMIT 1;更新用户表,  %表示允许所有的ip访问,这样就配置了root可以远程连接
+  flush privileges;  强制刷新权限
+  quit  推出mysql模式
+  
+  chkconfig  mysqld on  配置mysql开机自启动
+  chkconfig --list  查看开机自启动是否配置成功
+
+
+
+/////////////////////////////////////安装jdk//////////////////////////////
+解压tar -xzvf jdk-8u144-linux-x64.tar.gz 
+
+JAVA_HOME=/home/jdk8/jdk1.8.0_144
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+PATH=$JAVA_HOME/bin:$PATH
+export JAVA_HOME CLASSPATH PATH
+
+# source /etc/profile
+# java -version
+# javac
+配置环境变量
+
+
+进入etcprofile
+在最末尾创建javahome然后把jdk路径配入
+把路径加入path中
+用export到处javahome和path
+执行source /etc/profile
+
+
+http://www.cnblogs.com/lobo/p/5657684.html  如何关闭springboot
+
+http://blog.csdn.net/longxing_123/article/details/71214239
+
+
+java -jar app.jar             如何启动app
+

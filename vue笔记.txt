@@ -1,0 +1,63 @@
+1、安装nodejs
+2、npm install -g vue-cli  安装脚手架（在那个文件夹下就安装到哪个文件夹下）  -g是global的意思
+3、npm install -g webpack 安装打包工具
+
+输入f:进入F盘  cd vueProject 进入这个文件夹（或者直接在f盘下按Shift+右键，点击PowerShell后操作）
+4、vue init webpack myapp  新建一个叫myapp的工程
+
+? Project name myapp
+? Project description A Vue.js project
+? Author
+? Vue build standalone
+? Install vue-router? Yes
+? Use ESLint to lint your code? No
+? Setup unit tests with Karma + Mocha? No
+? Setup e2e tests with Nightwatch? No
+
+cd myapp  进入到myapp目录下
+
+npm install  安装项目常用依赖
+
+npm run dev  运行项目（这个只能在本地跑）
+
+npm run build  # 打包压缩（这个能在服务器跑）
+
+
+$ npm i element-ui@1.4.6
+
+在main.js中引入element-ui，然后就可以在其他任何页面中使用了
+//引入Element开始
+
+import Element from 'element-ui'
+
+import 'element-ui/lib/theme-default/index.css'
+
+Vue.use(Element)
+
+//引入Element结束
+
+
+
+///////////////////////////////使用element-ui//////////////////////
+
+1、用element-starter-master模板项目改名字
+2、用编辑器打开模板项目
+3、npm install  安装项目常用依赖
+4、npm run dev  运行项目（这个只能在本地跑） 
+
+npm install vue-router --save  安装路由
+
+npm i element-ui@1.4.6 --save
+
+npm install echarts --save
+
+
+//李伟克隆工程
+https://gitee.com/lee_well/meilishuo.git
+
+
+import router from './router'  默认找router文件夹下的index.js
+import store from '../store/store'  默认先找store.js文件
+import Vue from 'vue' 找node_modules中的文件
+
+import jquery from "../static/js/jquery-1.11.1.min.js"  找自己的文件

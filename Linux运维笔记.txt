@@ -1,0 +1,125 @@
+exit：推出
+用户名：root
+密码：Pass12345
+
+关机命令：shutdown -h now "xianzaiguanji"
+查看历史命令：history
+查看ip：ifconfig
+配置网卡：vi /etc/sysconfig/network-scripts/ifcfg-eth0  //主要配置网卡
+重启网卡：service network restart
+切换出win10:Ctrl+Alt
+rpm -qa|grep vsftpd  查看是否安装
+yum install vsftpd
+service vsftpd start
+service vsftpd stop
+service vsftpd status 查看是否启动
+
+# cp vsftpd.conf vsftpd.conf.cp  备份文件
+
+# netstat -tuln | grep :21 查看防火墙端口是否开启
+
+set nu  设置行号
+
+#yum install -y lrzsz  //安装上传软件
+#rz //上传命令  
+#sz //下载命令
+
+#tar -zcvf in.tar.gz install.log install.log.syslog//压缩命令   tar包命令  c压缩x解压v打包f显示压缩过程。tar是包，gz是压缩格式
+#tar -tar -zxvf in.tar.gz//解压命令
+
+
+/////////////////////////vi命令///////////////////////////////////
+vi q！  强制退出  q推出  wq或者x保存推出
+进入编辑模式 i当前光标编辑  o换行编辑 
+ESC推出编辑模式进入普通模式，在普通模式下按：进入命令模式set nu 显示行号，/fff  按enter从当前光标查找fff n查找下一个，shift+n查找上一个。替换%s/fff/ccc将fff替换成ccc
+快速移动光标100+shift+g快速移动到100行。shift+g移动到末尾。shift+0移动到行首。shift+！移动到行尾
+
+普通模式u 回退，Ctrl+r 恢复上一步被撤销的操作，yy是复制单行，2yy复制光标下的2行，p是粘贴，dd是删除，Ndd删除光标下的N行。yw复制一个单词，2yw复制2个单词，dw删除一个单词，2dw删除两个单词。
+
+
+//////////////////////////添加用户组和设置用户组权限/////////////////////////////////////////
+groupadd develop  添加一个deveop用户组
+vi /etc/group  查看用户组是否添加成功
+useradd jiayaxing01 -g develop  给develop用户组添加一个jiayaxing01的账号
+ls /home 去家目录查看确认是否增加了账号
+passwd jiayaxing01   修改账号的密码
+# groups jiayaxing01
+userdel peter  删除用户
+groupdel peter 删除组
+chmod 766 test.txt  修改test.txt的权限为766 .自己|同组|其他组
+chmod u=rw,g=r,o=r test.txt   另一种修改权限的方式
+chown  -R jiayaxing01:develop test.txt  修改文件的所属用户和所属组
+
+
+
+/////////////////////////////修改主机名称///////////////////////////////////
+vi  /etc/sysconfig/network     编辑网卡 network主要配置域名
+HOSTNAME=jiayaxing02
+service network restart  重启网卡
+reboot 重启服务器
+
+///////////////////////////创建目录和文件//////////////////////////////////////
+
+linux中创建文件用touch    例如：touch 1.txt
+删除文件用rm       例如：rm -f 1.txt
+创建目录用mkdir    例如：mkdir daiyuanqi
+删除空目录用rmdir  例如：rmdir daiyuanqi （有东西的目录不能删）
+删除装有东西的目录就用rm -rf  例如rm -rf XXX
+
+////////////////////////////常用文件加知识/////////////////////
+用root用户登录直接在根下的root木目录下。这时新建的文件文件夹等都在这个root文件夹下
+用普通用户登陆直接在host（家）目录下的自己那个文件夹下。这时新建的文件和文件夹都在家目录中的自己的那个目录下。
+小工具一般用yum安装。其他大型软件以后可能卸载麻烦一般直接用压缩包解压安装。
+
+////////////////安装telnet服务器和客户端////////////////////////////////////
+
+rpm -qa|grep telnet
+yum list|grep telnet   查看是否安装了telnet  后面是@base则是安装了，后面是base则是没有安装
+yum install telnet
+yum install telnet-server   安装telnet-server
+vi /etc/xinetd.d/telnet  修改配置文件将”disable= yes”改成” disable=no”
+service xinetd restart 重启telnet服务器
+iptables -I INPUT -p tcp --dport 23 -jACCEPT
+iptables -I INPUT -p udp --dport 23 -jACCEPT  
+service iptables save
+service iptables restart
+service telnet status
+service iptables status  配置保存重启查看防火墙
+telnet 127.0.0.1 22 测试telnet成功
+
+
+////////////////////////////iptables 解读/////////////////////////////
+# iptables -vnL  查看iptable 状态
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)     policy ACCEPT 默认策略为接受
+ pkts bytes target     prot opt in     out     source               destination         
+    0     0 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0           udp dpt:23 
+    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0           tcp dpt:23 
+  592 46001 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           state RELATED,ESTABLISHED 
+    1    48 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0           
+    3   180 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0           
+    1    52 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0           state NEW tcp dpt:22 
+    6   468 REJECT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           reject-with icmp-host-prohibited 
+
+1.接受udp协议来源地址是所有目的地址是所有访问端口是23 的所有请求。
+2.接受tcp协议来源地址是所有目的地址是所有访问端口是23 的所有请求。
+3.允许进入的数据包只能是刚刚我发出去的数据包的回应，ESTABLISHED：已建立的链接状态。RELATED：该数据包与本机发出的数据包有关。
+4.环回接口lo,意思是所有从lo口进出的数据全部接受,这条规则必须开启,检测ping localhost。回环接口即自己给自己发数据的接口
+5.接受所有tcp协议来源地址是所有，目的地址是所有访问端口是22的所有请求
+6.拒绝所有请求
+
+注意：匹配规则是重上往下匹配
+常用配置：
+iptables -I INPUT -p tcp --dport 21 -j ACCEPT
+iptables -I INPUT -p tcp --dport 23 -jACCEPT
+iptables -I INPUT -p udp --dport 23 -jACCEPT  
+iptables -A INPUT -m state –state NEW -m tcp -p tcp –dport 80 -j ACCEPT（允许80端口通过防火墙）
+# iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
+service iptables save
+service iptables restart
+
+/////////////////////////////////////////
+whereis vsftpd 查看vsftpd文件存放的位置
+whereis vsftpd
+
+
+
