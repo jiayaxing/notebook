@@ -42,7 +42,7 @@ groupadd develop  添加一个deveop用户组
 vi /etc/group  查看用户组是否添加成功
 useradd jiayaxing01 -g develop  给develop用户组添加一个jiayaxing01的账号
 ls /home 去家目录查看确认是否增加了账号
-passwd jiayaxing01   修改账号的密码
+passwd jiayaxing01   修改账号的密码（root用户下修改别jiayaxing01的密码）
 # groups jiayaxing01
 userdel peter  删除用户
 groupdel peter 删除组
@@ -120,6 +120,11 @@ service iptables restart
 /////////////////////////////////////////
 whereis vsftpd 查看vsftpd文件存放的位置
 whereis vsftpd
+
+
+
+//////////////////////安装Nginx////////////////////////
+https://www.cnblogs.com/taiyonghai/p/6728707.html  该博客中有记录
 
 
 
