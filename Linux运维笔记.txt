@@ -24,7 +24,7 @@ set nu  设置行号
 #rz //上传命令  
 #sz //下载命令
 
-#tar -zcvf in.tar.gz install.log install.log.syslog//压缩命令   tar包命令  c压缩x解压v打包f显示压缩过程。tar是包，gz是压缩格式
+#tar -zcvf in.tar.gz install.log install.log.syslog//压缩命令   tar包命令  z制定格式压缩时代表压缩成gz格式解压时代表被解压的包的格式为gz，c压缩x解压v打包f显示压缩过程。tar是包，gz是压缩格式
 #tar -tar -zxvf in.tar.gz//解压命令
 
 
