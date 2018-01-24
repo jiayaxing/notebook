@@ -29,6 +29,7 @@ linux中创建文件用touch    例如：touch 1.txt
 创建目录用mkdir    例如：mkdir daiyuanqi
 删除空目录用rmdir  例如：rmdir daiyuanqi （有东西的目录不能删）
 删除装有东西的目录就用rm -rf  例如rm -rf XXX
+移动文件用  mv  源目录   目标目录
 
 
 /////////////////////////vi命令///////////////////////////////////
