@@ -24,21 +24,18 @@ reboot 重启服务器
 
 ///////////////////////////创建目录和文件//////////////////////////////////////
 
-linux中创建文件用touch    例如：touch 1.txt
-删除文件用rm       例如：rm -f 1.txt
-创建目录用mkdir    例如：mkdir daiyuanqi
-删除空目录用rmdir  例如：rmdir daiyuanqi （有东西的目录不能删）
-删除装有东西的目录就用rm -rf  例如rm -rf XXX
-移动文件用  mv  源目录   目标目录
-
+1、创建文件用touch    例如：touch 1.txt  
+2、创建目录用mkdir    例如：mkdir daiyuanqi
+3、删除装有东西的目录或文件用rm -rf  例如rm -rf XXX
+4、移动文件用  mv  源目录   目标目录
+5、拷贝文件  # cp vsftpd.conf vsftpd.conf.cp  备份文件
 
 /////////////////////////vi命令///////////////////////////////////
 
-1、拷贝文件  # cp vsftpd.conf vsftpd.conf.cp  备份文件
 
-2、打开vi   vi  /etc/sysconfig/network
+1、打开vi   vi  /etc/sysconfig/network
 
-3、vi的三种模式 
+2、vi的三种模式 
  
    （1）普通模式：  刚打开时的模式
 
