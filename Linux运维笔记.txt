@@ -34,9 +34,11 @@ linux中创建文件用touch    例如：touch 1.txt
 
 /////////////////////////vi命令///////////////////////////////////
 
-1、打开vi   vi  /etc/sysconfig/network
+1、拷贝文件  # cp vsftpd.conf vsftpd.conf.cp  备份文件
 
-2、vi的三种模式 
+2、打开vi   vi  /etc/sysconfig/network
+
+3、vi的三种模式 
  
    （1）普通模式：  刚打开时的模式
 
