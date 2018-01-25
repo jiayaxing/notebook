@@ -91,8 +91,15 @@ reboot 重启服务器
 
 //////////////////////////////软件查询即安装和卸载//////////////////////////////////////////////////
 
+rpm -qa                查询所有的用rpm安装的软件
 rpm -qa|grep vsftpd  查看是否安装
+yum list               yum查看下载过的所有的包
+yum list installed     yum查看所有安装的软件
+yum list|grep telnet   yum查看指定的软件是否安装
 yum install vsftpd
+yum remove tree  卸载tree
+yum clean all 清除所有的下载下来的软件包
+
 service vsftpd start
 service vsftpd stop
 service vsftpd status 查看是否启动
@@ -114,9 +121,10 @@ service vsftpd status 查看是否启动
 
 ////////////////安装telnet服务器和客户端////////////////////////////////////
 
-rpm -qa|grep telnet
-yum list|grep telnet   查看是否安装了telnet  后面是@base则是安装了，后面是base则是没有安装
-yum install telnet
+rpm -qa|grep telnet    查看指定软件是否安装
+
+yum list|grep telnet   yum查看是否安装了telnet  后面是@base则是安装了，后面是base则是没有安装
+yum install telnet     
 yum install telnet-server   安装telnet-server
 vi /etc/xinetd.d/telnet  修改配置文件将”disable= yes”改成” disable=no”
 service xinetd restart 重启telnet服务器
