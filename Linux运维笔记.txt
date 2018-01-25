@@ -174,6 +174,8 @@ whereis vsftpd
 
 //////////////////////安装Nginx////////////////////////
 https://www.cnblogs.com/taiyonghai/p/6728707.html  该博客中有记录
+但是安装时一定要用 --prefix指定目录，要不然卸载的是后不好卸载。如：
+$ ./configure --prefix=/tmp/to_remove && make install
 
 
 
