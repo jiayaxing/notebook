@@ -177,5 +177,12 @@ https://www.cnblogs.com/taiyonghai/p/6728707.html  该博客中有记录
 但是安装时一定要用 --prefix指定目录，要不然卸载的是后不好卸载。如：
 $ ./configure --prefix=/tmp/to_remove && make install
 
+1、./config --prefix=/home/nginx/opensslInstall && make && make install
+2、./configure --prefix=/home/nginx/pcreInstall && make && make install
+3、./configure --prefix=/home/nginx/zlibInstall && make && make install
+4、./configure --prefix=/home/nginx/nginxInstall --with-pcre=/home/nginx/pcre-8.40  && make && make install
+   --with-pcre=/home/nginx/pcre-8.40 指定pcre源码包地址
+5、/home/nginx/nginxInstall/sbin/nginx -v 查看Nginx版本
+
 
 
