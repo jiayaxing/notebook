@@ -39,6 +39,13 @@ export JAVA_HOME CLASSPATH PATH
 配置环境变量
 
 
+备注：:
+  1、是连接两个字符串  
+  2、都是大写其实就是常量
+  3、PATH=$JAVA_HOME/bin:$PATH中，最好把$PATH放在后面，因为找执行文件的时候是从前往后找，这样先找到自己配置的那个JAVA_HOME。
+     如果放在后面则可能找到$PATH中别的JAVA_HOME了。
+  4、用echo 可以在别的地方输出配置的这两个参数。如：echo PATH
+
 进入etcprofile
 在最末尾创建javahome然后把jdk路径配入
 把路径加入path中
