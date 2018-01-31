@@ -62,3 +62,10 @@ import store from '../store/store'  默认先找store.js文件
 import Vue from 'vue' 找node_modules中的文件
 
 import jquery from "../static/js/jquery-1.11.1.min.js"  找自己的文件
+
+//生产运维
+1、yum -y install unzip  //安装unzip解压工具
+2、将编译后的文件夹编译成dist文件夹
+3、将文件夹打包成zip格式上传到Linux
+4、在Linux用unzip dist.zip 命令上解压
+
