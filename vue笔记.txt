@@ -1,3 +1,4 @@
+vscode高亮显示   1、安装vetur 2、Dracula Official 3、选择Monokai这个颜色主题 
 1、安装nodejs
 2、npm install -g vue-cli  安装脚手架（在那个文件夹下就安装到哪个文件夹下）  -g是global的意思
 3、npm install -g webpack 安装打包工具
