@@ -186,3 +186,13 @@ $ ./configure --prefix=/tmp/to_remove && make install
 
 
 
+///////////////////////自己电脑配置域名映射////////////////////////////////////////
+
+1、在C盘搜索hosts
+
+2、找到C:\Windows\System32\drivers\etc  
+
+3、点击打开在最下方加上***.***.**.*** t.test.com  即可
+
+
+
