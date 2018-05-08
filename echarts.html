@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stacked</title>
+    <script src="./echarts.js"></script>
+    <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+    
+            html body {
+                height: 100vh;
+            }
+            .container {
+                width: 100%;
+                height: 100%;
+            }
+            .container .stacked{
+                width: 90%;
+                height: 70%;
+                margin: 0 auto;
+                margin-top: 50px;;
+                margin-bottom: 50px;
+            }
+            .container p{
+                text-align: center;
+                font-weight: 700;
+            }
+        </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="stacked" class="stacked"></div>
+        <p id="title1"></p>
+        <p id="title2"></p>
+    </div>
+</body>
+<script>
+    var stacked = echarts.init(document.getElementById('stacked'));
+    stackedOption = {
+        title: {
+            text: '2018年1月齿服务科预约量及就诊量走势',
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data: ['当日预约', '当日就诊'],
+            y: 'bottom'
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        xAxis: [{
+            type: 'category',
+            boundaryGap: false,
+            data: Array.from({length:31},(val,index)=> index+1)
+        }],
+        yAxis: [{
+            type: 'value'
+        }],
+        series: [{
+                name: '当日预约',
+                type: 'line',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top'
+                    }
+                },
+                data: Array.from({length:31},(val,index)=> Math.floor((Math.random()*50)))
+            },
+            {
+                name: '当日就诊',
+                type: 'line',
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'bottom'
+                    }
+                },
+                data: Array.from({length:31},(val,index)=> Math.floor((Math.random()*60)))
+            }
+        ]
+    };
+    stacked.setOption(stackedOption);
+    var title1 = document.getElementById('title1')
+    var title2 = document.getElementById('title2')
+    function par(arr){
+        var count=arr.reduce((prev,curt)=>prev+curt,0)/arr.length
+        var index = String(count).indexOf('.')
+        return String(count).slice(0,index+2)
+    }
+    function titleMaxInit(){
+        const arr = stackedOption.series[0].data
+        title1.innerHTML = `2018年月日均预约量为${par(arr)}人次,最高${Math.max.apply(null,arr)}人次/日,最低${Math.min.apply(null,arr)}人次/日`
+    }
+    function titleMinInit(){
+        const arr = stackedOption.series[1].data
+        title2.innerHTML = `2018年月日均就诊量为${par(arr)}人次,最高${Math.max.apply(null,arr)}人次/日,最低${Math.min.apply(null,arr)}人次/日`
+    }
+    setTimeout(function(){
+        titleMaxInit()
+        titleMinInit()
+    },0)
+</script>
+
+</html>
