@@ -1,59 +1,59 @@
-controler�е����������@RequestParam����Ϊ�ò����ȴ��룬������ò����ɴ��Ϳɲ����롣
-maven��Ŀ����Ҫ�������ļ���·��
-1��src/main/java      ��һ���������Ƶİ����ڰ��´����java�ļ�
-2��src/main/resources  �������ļ���mapper�ļ�
-3��src/main/webapp     �澲̬�ļ�
+controler中的入参数加上@RequestParam则认为该参数比传入，不加则该参数可传和可不传入。
+maven项目最重要的三个文件夹路径
+1、src/main/java      存一个域名类似的包，在包下存各种java文件
+2、src/main/resources  存配置文件和mapper文件
+3、src/main/webapp     存静态文件
 
 
-mapperɨ����ֻ��ɨ��mapper�ӿڣ�����ֻҪ��֤mapper�ӿڱ������ļ��ж�Ӧ��.xml�ļ���һ���ļ����¾����ˣ�����֮ǰ���ǿ��Բ���һ���ļ����¡�
+mapper扫描器只是扫描mapper接口，所以只要保证mapper接口编译后的文件盒对应的.xml文件在一个文件夹下就行了，编译之前他们可以不在一个文件夹下。
 
 
-�����̣�\\10-012-3554   �ڡ��������·���д򿪣�������������д�
+共享盘：\\10-012-3554   在“计算机”路径中打开，不能再浏览器中打开
 
-���ݻ����˺�:itw_wangpx  ���룺wyy666888
-
-
-svn��ַ�˻������룺http://svncloud.it.taikang.com/svn/SourceCode  itw_jiayx   itw_jiayx34
-
-dubbo����ҳ���ַ���˻������룺http://10.130.201.47:8080/dubboadmin/   �˻���root    ���룺root
-
-level--------�ȼ�
+堡垒机：账号:itw_wangpx  密码：wyy666888
 
 
-Ctrl+o  :�ҷ�����ݼ�
+svn地址账户和密码：http://svncloud.it.taikang.com/svn/SourceCode  itw_jiayx   itw_jiayx34
 
-Ctrl+Shift+o :����û�õİ�
+dubbo管理页面地址、账户和密码：http://10.130.201.47:8080/dubboadmin/   账户：root    密码：root
 
-���ԣ�
-ѡ�����  Ctrl+Shift+i :�����п�ѡ�еĽ��
-Ctrl+1  :�Զ���ȫ������
-
-�һ�������RUN AS������meven build :�滻��Ŀtarget��maven���ؿ��е��е�profile
-�һ�������properties������Maven :�滻tomcat�е�profile������滻���Ժ�Ҫ���·�����
-
-TicketSourceServiceTest  ������
+level--------等级
 
 
+Ctrl+o  :找方法快捷键
 
-linux����  1.������Ҫ������war�����ݱ��沢��¼�汾���� 2.��������һ��Ҫ�����war���������н�ѹ��war���õ����ļ��б��沢��¼�汾���ڣ�������������Ժ����Ӳ���  3.��½���ݻ�����һ���ϴ���war���������ӽ��������  4.������ǿɱ��ǰ���е���վ�������   5.�Ƴ���������tomcat�еĸո�ɱ�����Ǹ���վ�ļ��� 6.�ϴ�����Ҫ����ķ���Ľ�ѹ�ļ���  7.�ϴ�����Ҫ����ķ����war��  8.����Ҫ����tomcat��sh ��������tomcat  9.��tail ����鿴catalina.out�ļ������û�б���
+Ctrl+Shift+o :批量没用的包
+
+调试：
+选中语句  Ctrl+Shift+i :不运行看选中的结果
+Ctrl+1  :自动补全定义项
+
+右击——》RUN AS——》meven build :替换项目target和maven本地库中的中的profile
+右击——》properties——》Maven :替换tomcat中的profile。这个替换掉以后要重新发布。
+
+TicketSourceServiceTest  测试类
+
+
+
+linux部署  1.将本地要发布的war包备份保存并记录版本日期 2.本地运行一下要部署的war包，将运行解压的war包得到的文件夹保存并记录版本日期（这个操作方便以后增加部署）  3.登陆堡垒机将上一个上传的war包名称增加今天的日期  4.用命令强杀当前运行的网站服务进程   5.移除服务器中tomcat中的刚刚杀死的那个网站文件夹 6.上传本地要部署的服务的解压文件夹  7.上传本地要部署的服务的war包  8.进入要启动tomcat用sh 命令启动tomcat  9.用tail 命令查看catalina.out文件输出有没有报错
 tail -f catalina.out
 
-grep  �൱�ڹ�����
+grep  相当于过滤器
 
-ansibal  �ַ�����
-
-
-��������  linux����  1.�����ص���Ŀinstall�����2.�Ѵ���õ�war���ϴ������ݻ��ĵ�ǰ�����ļ����¡�3.�����ݻ���war���ַ�������΢�����tomcat����ʱ�ļ����¡�4.��½ÿ��΢�������ڵ�linuxϵͳ��5���鿴��ǰϵͳ��������tomcat���̺š�6.ǿ��ɱ���Ǹ�tomcat���̡�7���Ƴ����tomcat�µĵ�ǰ��war����8.�鿴ȷ���Ƿ񻻴����Ǹ�war��9.��������ոշ�����ʱ�ļ����е�war��.10�鿴ȷ�����war���Ѿ�����11.��������tomcat���Ҳ鿴catalina.out�ļ��������12�����11��һ�����Է�Ϊ����Ҳ���Ժϲ���һ����
+ansibal  分发命令
 
 
+生产商上  linux部署  1.将本地的项目install打包好2.把打包好的war包上传到堡垒机的当前日期文件夹下。3.将堡垒机的war包分发到各个微服务的tomcat的临时文件夹下。4.登陆每个微服务所在的linux系统。5、查看当前系统下启动的tomcat进程号。6.强制杀死那个tomcat进程。7、移除这个tomcat下的当前的war包。8.查看确认是否换存在那个war包9.重新移入刚刚放在临时文件夹中的war包.10查看确认这个war包已经移入11.重新启动tomcat并且查看catalina.out文件的输出。12、最后11这一步可以分为两步也可以合并成一步。
 
-ps  -ef|grep java   //��غ�̨JAVA����
+
+
+ps  -ef|grep java   //监控后台JAVA进程
 kill -9  4536
-rm -rf  ·��      �Ƴ�Ŀ¼��r�ǵݹ���Ƴ��������Ŀ¼��f��ǿ���Ƴ�
-ll ������ϸ����Ϣ
-mv  ԴĿ¼   Ŀ��Ŀ¼
+rm -rf  路径      移除目录，r是递归的移除下面的子目录。f是强制移除
+ll 看到详细的信息
+mv  源目录   目标目录
 
-webappsdpt  ��ʱ�ļ���
+webappsdpt  临时文件夹
 
 
 sh 100.20.190.30
@@ -61,7 +61,7 @@ exit
 seiable  
 
 
-2017/1/11 ����
+2017/1/11 部署
 
 sh 100.20.190.30^C
 exit
@@ -82,15 +82,19 @@ sh startup.sh
 cd ../logs
 tail catalina.out
 
+//springboot项目启动停止
+启动：java -jar xxx.jar &
+停止：ps -ef|grep java;找到进程号;kill -9 30003;杀死进程;
+查看输出：tail -f catalina.out
 
-//�鿴������־
+//查看错误日志
 cd /u02/tomcat1.70.02/8080/logs
-tail -f catalina.out  ���� tail -100 catalina.out
+tail -f catalina.out  或者 tail -100 catalina.out
 
 sudo sh ./startup.sh;tail -f ../logs/catalina.out
 
 
-//��ѯ�˿�
-netstat -tulnp  ���� netstat -tulnp|grep mysql
-//yum ��鰲װ��ʲô 
+//查询端口
+netstat -tulnp  或者 netstat -tulnp|grep mysql
+//yum 检查安装了什么 
 yum list|grep mysql
