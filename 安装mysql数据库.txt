@@ -1,13 +1,13 @@
-  yum list installed|grep mysql   ²é¿´ÊÇ·ñ°²×°ÁËmysql
-  yum remove mysql-libs.x86_64    ÒÆ³ıÒÑ¾­°²×°µÄmysql
+  yum list installed|grep mysql   æŸ¥çœ‹æ˜¯å¦å®‰è£…äº†mysql
+  yum remove mysql-libs.x86_64    ç§»é™¤å·²ç»å®‰è£…çš„mysql
   yum list installed|grep mysql   
-  yum -y install mysql-server mysql mysql-devel  °²×°mysql
+  yum -y install mysql-server mysql mysql-devel  å®‰è£…mysql
 
-  vi /etc/my.cnf ¼ÓÈëdefault-character-set=utf8
+  vi /etc/my.cnf åŠ å…¥default-character-set=utf8
 
-  # service mysqld start  Æô¶¯mysql
-  # mysqladmin -u root password 'Pass12345' Æô¶¯ºó¸ørootÓÃ»§ÉèÖÃÃÜÂë
-  # mysql -u root -p  ÓÃrootÓÃ»§µÇÂ½mysql
+  # service mysqld start  å¯åŠ¨mysql
+  # mysqladmin -u root password 'Pass12345' å¯åŠ¨åç»™rootç”¨æˆ·è®¾ç½®å¯†ç 
+  # mysql -u root -p  ç”¨rootç”¨æˆ·ç™»é™†mysql
 
   show databases;
   use mysql;
@@ -16,17 +16,47 @@
   select password from user;
   select user,password from user;
   select host,user from user;
-  UPDATE user SET `Host` = '%' WHERE `User` = 'root' LIMIT 1;¸üĞÂÓÃ»§±í,  %±íÊ¾ÔÊĞíËùÓĞµÄip·ÃÎÊ,ÕâÑù¾ÍÅäÖÃÁËroot¿ÉÒÔÔ¶³ÌÁ¬½Ó
-  flush privileges;  Ç¿ÖÆË¢ĞÂÈ¨ÏŞ
-  quit  ÍÆ³ömysqlÄ£Ê½
+  UPDATE user SET `Host` = '%' WHERE `User` = 'root' LIMIT 1;æ›´æ–°ç”¨æˆ·è¡¨,  %è¡¨ç¤ºå…è®¸æ‰€æœ‰çš„ipè®¿é—®,è¿™æ ·å°±é…ç½®äº†rootå¯ä»¥è¿œç¨‹è¿æ¥
+  flush privileges;  å¼ºåˆ¶åˆ·æ–°æƒé™
+  quit  æ¨å‡ºmysqlæ¨¡å¼
   
-  chkconfig  mysqld on  ÅäÖÃmysql¿ª»ú×ÔÆô¶¯
-  chkconfig --list  ²é¿´¿ª»ú×ÔÆô¶¯ÊÇ·ñÅäÖÃ³É¹¦
+  chkconfig  mysqld on  é…ç½®mysqlå¼€æœºè‡ªå¯åŠ¨
+  chkconfig --list  æŸ¥çœ‹å¼€æœºè‡ªå¯åŠ¨æ˜¯å¦é…ç½®æˆåŠŸ
 
 
+//å¦‚æœå‡ºç°ç”¨æ­£ç¡®çš„ç”¨æˆ·åå’Œå¯†ç åœ¨æœ¬æœºç™»å½•ä¸äº†mysqlï¼Œåˆ™æ˜¯å› ä¸ºuserè¡¨ä¸­localhostçš„ä¸»æœºæ²¡æœ‰ç”¨æˆ·
 
-/////////////////////////////////////°²×°jdk//////////////////////////////
-½âÑ¹tar -xzvf jdk-8u144-linux-x64.tar.gz 
+åå’Œå¯†ç åŸå› é€ æˆçš„ã€‚æ¢å¦‚ä¸‹æ“ä½œå³å¯ç™»å½•ã€‚
+1ã€mysql -uroot -p -h 127.0.0.1 è¿™æ ·å³å¯ç™»å½•
+2ã€è¿œç¨‹ç”¨Navicat å°†localhostå¯¹åº”çš„userå’Œpasswordä¿®æ”¹æˆrootå’Œæ‚¨çš„å¯†ç ï¼›
+3ã€flush privileges;åˆ·æ–°æƒé™åå†æ¬¡ç™»å½•å³å¯ç™»å½•äº†ã€‚
+
+//ä¿®æ”¹mysqlé»˜è®¤ç¼–ç 
+1ã€åœ¨mysqlæ§åˆ¶å°ç”¨status; å‘½ä»¤æŸ¥çœ‹å½“å‰å­—ç¬¦ç¼–ç ï¼›
+2ã€ä¿®æ”¹mysqlé…ç½®æ–‡ä»¶
+
+vi /etc/my.cnf
+
+#åœ¨[client]æ®µå¢åŠ ä¸‹é¢ä»£ç 
+
+default-character-set=utf8
+
+#åœ¨[mysqld]æ®µå¢åŠ ä¸‹é¢çš„ä»£ç 
+
+default-character-set = utf8
+default-storage-engine=INNODB
+character-set-server=utf8
+collation-server=utf8_general_ci
+
+:wq! #ä¿å­˜é€€å‡º
+
+3ã€service mysqld restart #é‡å¯MySQL
+
+å†æ¬¡è¿›å…¥MySQLæ§åˆ¶å°æŸ¥çœ‹,æ˜¯å¦ä¿®æ”¹æˆåŠŸã€‚
+
+
+/////////////////////////////////////å®‰è£…jdk//////////////////////////////
+è§£å‹tar -xzvf jdk-8u144-linux-x64.tar.gz 
 
 JAVA_HOME=/home/jdk8/jdk1.8.0_144
 CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
@@ -36,27 +66,27 @@ export JAVA_HOME CLASSPATH PATH
 # source /etc/profile
 # java -version
 # javac
-ÅäÖÃ»·¾³±äÁ¿
+é…ç½®ç¯å¢ƒå˜é‡
 
 
-±¸×¢£º:
-  1¡¢ÊÇÁ¬½ÓÁ½¸ö×Ö·û´®  
-  2¡¢¶¼ÊÇ´óĞ´ÆäÊµ¾ÍÊÇ³£Á¿
-  3¡¢PATH=$JAVA_HOME/bin:$PATHÖĞ£¬×îºÃ°Ñ$PATH·ÅÔÚºóÃæ£¬ÒòÎªÕÒÖ´ĞĞÎÄ¼şµÄÊ±ºòÊÇ´ÓÇ°ÍùºóÕÒ£¬ÕâÑùÏÈÕÒµ½×Ô¼ºÅäÖÃµÄÄÇ¸öJAVA_HOME¡£
-     Èç¹û·ÅÔÚºóÃæÔò¿ÉÄÜÕÒµ½$PATHÖĞ±ğµÄJAVA_HOMEÁË¡£
-  4¡¢ÓÃecho ¿ÉÒÔÔÚ±ğµÄµØ·½Êä³öÅäÖÃµÄÕâÁ½¸ö²ÎÊı¡£Èç£ºecho PATH
+å¤‡æ³¨ï¼š:
+  1ã€æ˜¯è¿æ¥ä¸¤ä¸ªå­—ç¬¦ä¸²  
+  2ã€éƒ½æ˜¯å¤§å†™å…¶å®å°±æ˜¯å¸¸é‡
+  3ã€PATH=$JAVA_HOME/bin:$PATHä¸­ï¼Œæœ€å¥½æŠŠ$PATHæ”¾åœ¨åé¢ï¼Œå› ä¸ºæ‰¾æ‰§è¡Œæ–‡ä»¶çš„æ—¶å€™æ˜¯ä»å‰å¾€åæ‰¾ï¼Œè¿™æ ·å…ˆæ‰¾åˆ°è‡ªå·±é…ç½®çš„é‚£ä¸ªJAVA_HOMEã€‚
+     å¦‚æœæ”¾åœ¨åé¢åˆ™å¯èƒ½æ‰¾åˆ°$PATHä¸­åˆ«çš„JAVA_HOMEäº†ã€‚
+  4ã€ç”¨echo å¯ä»¥åœ¨åˆ«çš„åœ°æ–¹è¾“å‡ºé…ç½®çš„è¿™ä¸¤ä¸ªå‚æ•°ã€‚å¦‚ï¼šecho PATH
 
-½øÈëetcprofile
-ÔÚ×îÄ©Î²´´½¨javahomeÈ»ºó°ÑjdkÂ·¾¶ÅäÈë
-°ÑÂ·¾¶¼ÓÈëpathÖĞ
-ÓÃexportµ½´¦javahomeºÍpath
-Ö´ĞĞsource /etc/profile
+è¿›å…¥etcprofile
+åœ¨æœ€æœ«å°¾åˆ›å»ºjavahomeç„¶åæŠŠjdkè·¯å¾„é…å…¥
+æŠŠè·¯å¾„åŠ å…¥pathä¸­
+ç”¨exportåˆ°å¤„javahomeå’Œpath
+æ‰§è¡Œsource /etc/profile
 
 
-http://www.cnblogs.com/lobo/p/5657684.html  ÈçºÎ¹Ø±Õspringboot
+http://www.cnblogs.com/lobo/p/5657684.html  å¦‚ä½•å…³é—­springboot
 
 http://blog.csdn.net/longxing_123/article/details/71214239
 
 
-java -jar app.jar             ÈçºÎÆô¶¯app
+java -jar app.jar             å¦‚ä½•å¯åŠ¨app
 
