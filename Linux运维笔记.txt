@@ -203,3 +203,10 @@ java -jar -Dserver.port=10000 -Dlogging.path=/var/logs xxx.jar &    -- 默认在
 java -jar -Dserver.port=10001 -Dlogging.file=/var/logs/yyy.log yyy.jar &  //启动时制定端口时10001 制定日志文件位置是/var/logs/yyy.log
 
 java -Xms256m -Xmx512m -jar yyy.jar & //增加了启动时虚拟机内存的指定
+
+
+
+
+//////////////////////sudo文件授权配置//////////////////////////////////////
+//详情见这篇文章
+https://www.cnblogs.com/ImJerryChan/p/6667819.html
