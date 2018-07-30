@@ -1,145 +1,145 @@
 
-/////////////////////////ÕË»§¼´µÇÂ½£¬ÍË³ö£¬¹Ø»ú ÃüÁî///////////////////////////
+/////////////////////////è´¦æˆ·å³ç™»é™†ï¼Œé€€å‡ºï¼Œå…³æœº å‘½ä»¤///////////////////////////
 
-ÓÃ»§Ãû£ºroot
-ÃÜÂë£ºPass12345
+ç”¨æˆ·åï¼šroot
+å¯†ç ï¼šPass12345
 
-exit£ºÕË»§ÍË³ö
-shutdown -h now "xianzaiguanji"////¹Ø»úÃüÁî
-reboot ÖØÆô·şÎñÆ÷
+exitï¼šè´¦æˆ·é€€å‡º
+shutdown -h now "xianzaiguanji"////å…³æœºå‘½ä»¤
+reboot é‡å¯æœåŠ¡å™¨
 
-////////////////////////////³£ÓÃÎÄ¼ş¼ĞÖªÊ¶/////////////////////
+////////////////////////////å¸¸ç”¨æ–‡ä»¶å¤¹çŸ¥è¯†/////////////////////
 
-ÓÃrootÓÃ»§µÇÂ¼Ö±½ÓÔÚ¸ùÏÂµÄrootÄ¾Ä¿Â¼ÏÂ¡£ÕâÊ±ĞÂ½¨µÄÎÄ¼şÎÄ¼ş¼ĞµÈ¶¼ÔÚÕâ¸örootÎÄ¼ş¼ĞÏÂ
-ÓÃÆÕÍ¨ÓÃ»§µÇÂ½Ö±½ÓÔÚhost£¨¼Ò£©Ä¿Â¼ÏÂµÄ×Ô¼ºÄÇ¸öÎÄ¼ş¼ĞÏÂ¡£ÕâÊ±ĞÂ½¨µÄÎÄ¼şºÍÎÄ¼ş¼Ğ¶¼ÔÚ¼ÒÄ¿Â¼ÖĞµÄ×Ô¼ºµÄÄÇ¸öÄ¿Â¼ÏÂ¡£
-Ğ¡¹¤¾ßÒ»°ãÓÃyum°²×°¡£ÆäËû´óĞÍÈí¼şÒÔºó¿ÉÄÜĞ¶ÔØÂé·³Ò»°ãÖ±½ÓÓÃÑ¹Ëõ°ü½âÑ¹°²×°¡£
+ç”¨rootç”¨æˆ·ç™»å½•ç›´æ¥åœ¨æ ¹ä¸‹çš„rootæœ¨ç›®å½•ä¸‹ã€‚è¿™æ—¶æ–°å»ºçš„æ–‡ä»¶æ–‡ä»¶å¤¹ç­‰éƒ½åœ¨è¿™ä¸ªrootæ–‡ä»¶å¤¹ä¸‹
+ç”¨æ™®é€šç”¨æˆ·ç™»é™†ç›´æ¥åœ¨hostï¼ˆå®¶ï¼‰ç›®å½•ä¸‹çš„è‡ªå·±é‚£ä¸ªæ–‡ä»¶å¤¹ä¸‹ã€‚è¿™æ—¶æ–°å»ºçš„æ–‡ä»¶å’Œæ–‡ä»¶å¤¹éƒ½åœ¨å®¶ç›®å½•ä¸­çš„è‡ªå·±çš„é‚£ä¸ªç›®å½•ä¸‹ã€‚
+å°å·¥å…·ä¸€èˆ¬ç”¨yumå®‰è£…ã€‚å…¶ä»–å¤§å‹è½¯ä»¶ä»¥åå¯èƒ½å¸è½½éº»çƒ¦ä¸€èˆ¬ç›´æ¥ç”¨å‹ç¼©åŒ…è§£å‹å®‰è£…ã€‚
 
-//////////////////////³£ÓÃĞ¡ÃüÁî////////////////////////////////////////
+//////////////////////å¸¸ç”¨å°å‘½ä»¤////////////////////////////////////////
 
-²é¿´ÀúÊ·ÃüÁî£ºhistory
-ÇĞ»»³öwin10:Ctrl+Alt
-
-
+æŸ¥çœ‹å†å²å‘½ä»¤ï¼šhistory
+åˆ‡æ¢å‡ºwin10:Ctrl+Alt
 
 
-///////////////////////////´´½¨Ä¿Â¼ºÍÎÄ¼ş//////////////////////////////////////
-
-1¡¢´´½¨ÎÄ¼şÓÃtouch    ÀıÈç£ºtouch 1.txt  
-2¡¢´´½¨Ä¿Â¼ÓÃmkdir    ÀıÈç£ºmkdir daiyuanqi
-3¡¢É¾³ı×°ÓĞ¶«Î÷µÄÄ¿Â¼»òÎÄ¼şÓÃrm -rf  ÀıÈçrm -rf XXX
-4¡¢ÒÆ¶¯ÎÄ¼şÓÃ  mv  Ô´Ä¿Â¼   Ä¿±êÄ¿Â¼
-5¡¢¿½±´ÎÄ¼ş  # cp vsftpd.conf vsftpd.conf.cp  ±¸·İÎÄ¼ş
-
-/////////////////////////viÃüÁî///////////////////////////////////
 
 
-1¡¢´ò¿ªvi   vi  /etc/sysconfig/network
+///////////////////////////åˆ›å»ºç›®å½•å’Œæ–‡ä»¶//////////////////////////////////////
 
-2¡¢viµÄÈıÖÖÄ£Ê½ 
+1ã€åˆ›å»ºæ–‡ä»¶ç”¨touch    ä¾‹å¦‚ï¼štouch 1.txt  
+2ã€åˆ›å»ºç›®å½•ç”¨mkdir    ä¾‹å¦‚ï¼šmkdir daiyuanqi
+3ã€åˆ é™¤è£…æœ‰ä¸œè¥¿çš„ç›®å½•æˆ–æ–‡ä»¶ç”¨rm -rf  ä¾‹å¦‚rm -rf XXX
+4ã€ç§»åŠ¨æ–‡ä»¶ç”¨  mv  æºç›®å½•   ç›®æ ‡ç›®å½•
+5ã€æ‹·è´æ–‡ä»¶  # cp vsftpd.conf vsftpd.conf.cp  å¤‡ä»½æ–‡ä»¶
+
+/////////////////////////viå‘½ä»¤///////////////////////////////////
+
+
+1ã€æ‰“å¼€vi   vi  /etc/sysconfig/network
+
+2ã€viçš„ä¸‰ç§æ¨¡å¼ 
  
-   £¨1£©ÆÕÍ¨Ä£Ê½£º  ¸Õ´ò¿ªÊ±µÄÄ£Ê½
+   ï¼ˆ1ï¼‰æ™®é€šæ¨¡å¼ï¼š  åˆšæ‰“å¼€æ—¶çš„æ¨¡å¼
 
-	100+shift+g  ¹â±ê¿ìËÙÒÆ¶¯µ½100ĞĞ¡£
-	u »ØÍË£¬
-        Ctrl+r »Ö¸´ÉÏÒ»²½±»³·ÏúµÄ²Ù×÷£¬
-        yyÊÇ¸´ÖÆµ¥ĞĞ£¬2yy¸´ÖÆ¹â±êÏÂµÄ2ĞĞ£¬
-	yw¸´ÖÆÒ»¸öµ¥´Ê£¬2yw¸´ÖÆ2¸öµ¥´Ê£¬
-        ddÊÇÉ¾³ı£¬NddÉ¾³ı¹â±êÏÂµÄNĞĞ¡£
-        dwÉ¾³ıÒ»¸öµ¥´Ê£¬2dwÉ¾³ıÁ½¸öµ¥´Ê¡£
-	pÊÇÕ³Ìù£¬
+	100+shift+g  å…‰æ ‡å¿«é€Ÿç§»åŠ¨åˆ°100è¡Œã€‚
+	u å›é€€ï¼Œ
+        Ctrl+r æ¢å¤ä¸Šä¸€æ­¥è¢«æ’¤é”€çš„æ“ä½œï¼Œ
+        yyæ˜¯å¤åˆ¶å•è¡Œï¼Œ2yyå¤åˆ¶å…‰æ ‡ä¸‹çš„2è¡Œï¼Œ
+	ywå¤åˆ¶ä¸€ä¸ªå•è¯ï¼Œ2ywå¤åˆ¶2ä¸ªå•è¯ï¼Œ
+        ddæ˜¯åˆ é™¤ï¼ŒNddåˆ é™¤å…‰æ ‡ä¸‹çš„Nè¡Œã€‚
+        dwåˆ é™¤ä¸€ä¸ªå•è¯ï¼Œ2dwåˆ é™¤ä¸¤ä¸ªå•è¯ã€‚
+	pæ˜¯ç²˜è´´ï¼Œ
         
         
-    £¨2£©ÃüÁîÄ£Ê½£º  ÆÕÍ¨Ä£Ê½ÏÂ°´£º½øÈëÃüÁîÄ£Ê½  
+    ï¼ˆ2ï¼‰å‘½ä»¤æ¨¡å¼ï¼š  æ™®é€šæ¨¡å¼ä¸‹æŒ‰ï¼šè¿›å…¥å‘½ä»¤æ¨¡å¼  
 	
-	set nu  ÏÔÊ¾ĞĞºÅ£¬
+	set nu  æ˜¾ç¤ºè¡Œå·ï¼Œ
 
-        /fff  °´enter´Óµ±Ç°¹â±ê²éÕÒfff n²éÕÒÏÂÒ»¸ö£¬shift+n²éÕÒÉÏÒ»¸ö¡£
+        /fff  æŒ‰enterä»å½“å‰å…‰æ ‡æŸ¥æ‰¾fff næŸ¥æ‰¾ä¸‹ä¸€ä¸ªï¼Œshift+næŸ¥æ‰¾ä¸Šä¸€ä¸ªã€‚
 
-        %s/fff/ccc  ½«fffÌæ»»³Éccc
+        %s/fff/ccc  å°†fffæ›¿æ¢æˆccc
 
-        wq! ±£´æÍË³öÇ¿ÖÆ
+        wq! ä¿å­˜é€€å‡ºå¼ºåˆ¶
 
-     £¨3£©±à¼­Ä£Ê½£º  ÔÚÆÕÍ¨Ä£Ê½ÏÂ°´ i»òÕßo½øÈë±à¼­Ä£Ê½ £¬ iµ±Ç°¹â±ê±à¼­  o»»ĞĞ±à¼­   ESCÍÆ³ö
+     ï¼ˆ3ï¼‰ç¼–è¾‘æ¨¡å¼ï¼š  åœ¨æ™®é€šæ¨¡å¼ä¸‹æŒ‰ iæˆ–è€…oè¿›å…¥ç¼–è¾‘æ¨¡å¼ ï¼Œ iå½“å‰å…‰æ ‡ç¼–è¾‘  oæ¢è¡Œç¼–è¾‘   ESCæ¨å‡º
  
-//////////////////////////Ìí¼ÓÓÃ»§×éºÍÉèÖÃÓÃ»§×éÈ¨ÏŞ/////////////////////////////////////////
+//////////////////////////æ·»åŠ ç”¨æˆ·ç»„å’Œè®¾ç½®ç”¨æˆ·ç»„æƒé™/////////////////////////////////////////
 
-groupadd develop  Ìí¼ÓÒ»¸ödeveopÓÃ»§×é
-vi /etc/group  ²é¿´ÓÃ»§×éÊÇ·ñÌí¼Ó³É¹¦
-useradd jiayaxing01 -g develop  ¸ødevelopÓÃ»§×éÌí¼ÓÒ»¸öjiayaxing01µÄÕËºÅ
-ls /home È¥¼ÒÄ¿Â¼²é¿´È·ÈÏÊÇ·ñÔö¼ÓÁËÕËºÅ
-passwd jiayaxing01   ĞŞ¸ÄÕËºÅµÄÃÜÂë£¨rootÓÃ»§ÏÂĞŞ¸Ä±ğjiayaxing01µÄÃÜÂë£©
+groupadd develop  æ·»åŠ ä¸€ä¸ªdeveopç”¨æˆ·ç»„
+vi /etc/group  æŸ¥çœ‹ç”¨æˆ·ç»„æ˜¯å¦æ·»åŠ æˆåŠŸ
+useradd jiayaxing01 -g develop  ç»™developç”¨æˆ·ç»„æ·»åŠ ä¸€ä¸ªjiayaxing01çš„è´¦å·
+ls /home å»å®¶ç›®å½•æŸ¥çœ‹ç¡®è®¤æ˜¯å¦å¢åŠ äº†è´¦å·
+passwd jiayaxing01   ä¿®æ”¹è´¦å·çš„å¯†ç ï¼ˆrootç”¨æˆ·ä¸‹ä¿®æ”¹åˆ«jiayaxing01çš„å¯†ç ï¼‰
 # groups jiayaxing01
-userdel peter  É¾³ıÓÃ»§
-groupdel peter É¾³ı×é
-chmod 766 test.txt  ĞŞ¸Ätest.txtµÄÈ¨ÏŞÎª766 .×Ô¼º|Í¬×é|ÆäËû×é
-chmod u=rw,g=r,o=r test.txt   ÁíÒ»ÖÖĞŞ¸ÄÈ¨ÏŞµÄ·½Ê½
-chown  -R jiayaxing01:develop test.txt  ĞŞ¸ÄÎÄ¼şµÄËùÊôÓÃ»§ºÍËùÊô×é 
+userdel peter  åˆ é™¤ç”¨æˆ·
+groupdel peter åˆ é™¤ç»„
+chmod 766 test.txt  ä¿®æ”¹test.txtçš„æƒé™ä¸º766 .è‡ªå·±|åŒç»„|å…¶ä»–ç»„
+chmod u=rw,g=r,o=r test.txt   å¦ä¸€ç§ä¿®æ”¹æƒé™çš„æ–¹å¼
+chown  -R jiayaxing01:develop test.txt  ä¿®æ”¹æ–‡ä»¶çš„æ‰€å±ç”¨æˆ·å’Œæ‰€å±ç»„ 
  
 
-/////////////////////Ö÷ÒªÅäÖÃÍø¿¨//////////////////////////
+/////////////////////ä¸»è¦é…ç½®ç½‘å¡//////////////////////////
 
-ÅäÖÃÍø¿¨£ºvi /etc/sysconfig/network-scripts/ifcfg-eth0  
-ÖØÆôÍø¿¨£ºservice network restart
-²é¿´ip£ºifconfig
+é…ç½®ç½‘å¡ï¼švi /etc/sysconfig/network-scripts/ifcfg-eth0  
+é‡å¯ç½‘å¡ï¼šservice network restart
+æŸ¥çœ‹ipï¼šifconfig
 
-/////////////////////////////ĞŞ¸ÄÖ÷»úÃû³Æ///////////////////////////////////
+/////////////////////////////ä¿®æ”¹ä¸»æœºåç§°///////////////////////////////////
 
-vi  /etc/sysconfig/network     ±à¼­Íø¿¨ networkÖ÷ÒªÅäÖÃÓòÃû
+vi  /etc/sysconfig/network     ç¼–è¾‘ç½‘å¡ networkä¸»è¦é…ç½®åŸŸå
 HOSTNAME=jiayaxing02
-service network restart  ÖØÆôÍø¿¨
-reboot ÖØÆô·şÎñÆ÷
+service network restart  é‡å¯ç½‘å¡
+reboot é‡å¯æœåŠ¡å™¨
 
-//////////////////////////////Èí¼ş²éÑ¯¼´°²×°ºÍĞ¶ÔØ//////////////////////////////////////////////////
+//////////////////////////////è½¯ä»¶æŸ¥è¯¢å³å®‰è£…å’Œå¸è½½//////////////////////////////////////////////////
 
-rpm -qa                ²éÑ¯ËùÓĞµÄÓÃrpm°²×°µÄÈí¼ş
-rpm -qa|grep vsftpd  ²é¿´ÊÇ·ñ°²×°
-yum list               yum²é¿´ÏÂÔØ¹ıµÄËùÓĞµÄ°ü
-yum list installed     yum²é¿´ËùÓĞ°²×°µÄÈí¼ş
-yum list|grep telnet   yum²é¿´Ö¸¶¨µÄÈí¼şÊÇ·ñ°²×°
+rpm -qa                æŸ¥è¯¢æ‰€æœ‰çš„ç”¨rpmå®‰è£…çš„è½¯ä»¶
+rpm -qa|grep vsftpd  æŸ¥çœ‹æ˜¯å¦å®‰è£…
+yum list               yumæŸ¥çœ‹ä¸‹è½½è¿‡çš„æ‰€æœ‰çš„åŒ…
+yum list installed     yumæŸ¥çœ‹æ‰€æœ‰å®‰è£…çš„è½¯ä»¶
+yum list|grep telnet   yumæŸ¥çœ‹æŒ‡å®šçš„è½¯ä»¶æ˜¯å¦å®‰è£…
 yum install vsftpd
-yum remove tree  Ğ¶ÔØtree
-yum clean all Çå³ıËùÓĞµÄÏÂÔØÏÂÀ´µÄÈí¼ş°ü
+yum remove tree  å¸è½½tree
+yum clean all æ¸…é™¤æ‰€æœ‰çš„ä¸‹è½½ä¸‹æ¥çš„è½¯ä»¶åŒ…
 
 service vsftpd start
 service vsftpd stop
-service vsftpd status ²é¿´ÊÇ·ñÆô¶¯
+service vsftpd status æŸ¥çœ‹æ˜¯å¦å¯åŠ¨
 
-# cp vsftpd.conf vsftpd.conf.cp  ±¸·İÎÄ¼ş
+# cp vsftpd.conf vsftpd.conf.cp  å¤‡ä»½æ–‡ä»¶
 
-# netstat -tuln | grep :21 ²é¿´·À»ğÇ½¶Ë¿ÚÊÇ·ñ¿ªÆô
-
-
-#yum install -y lrzsz  //°²×°ÉÏ´«Èí¼ş
-#rz //ÉÏ´«ÃüÁî  
-#sz //ÏÂÔØÃüÁî
-
-#tar -zcvf in.tar.gz install.log install.log.syslog//Ñ¹ËõÃüÁî   tar°üÃüÁî  zÖÆ¶¨¸ñÊ½Ñ¹ËõÊ±´ú±íÑ¹Ëõ³Égz¸ñÊ½½âÑ¹Ê±´ú±í±»½âÑ¹µÄ°üµÄ¸ñÊ½Îªgz£¬
-                                                   //cÑ¹Ëõx½âÑ¹v´ò°üfÏÔÊ¾Ñ¹Ëõ¹ı³Ì¡£tarÊÇ°ü£¬gzÊÇÑ¹Ëõ¸ñÊ½
-#tar -tar -zxvf in.tar.gz//½âÑ¹ÃüÁî
+# netstat -tuln | grep :21 æŸ¥çœ‹é˜²ç«å¢™ç«¯å£æ˜¯å¦å¼€å¯
 
 
+#yum install -y lrzsz  //å®‰è£…ä¸Šä¼ è½¯ä»¶
+#rz //ä¸Šä¼ å‘½ä»¤  
+#sz //ä¸‹è½½å‘½ä»¤
 
-////////////////°²×°telnet·şÎñÆ÷ºÍ¿Í»§¶Ë////////////////////////////////////
+#tar -zcvf in.tar.gz install.log install.log.syslog//å‹ç¼©å‘½ä»¤   taråŒ…å‘½ä»¤  zåˆ¶å®šæ ¼å¼å‹ç¼©æ—¶ä»£è¡¨å‹ç¼©æˆgzæ ¼å¼è§£å‹æ—¶ä»£è¡¨è¢«è§£å‹çš„åŒ…çš„æ ¼å¼ä¸ºgzï¼Œ
+                                                   //cå‹ç¼©xè§£å‹væ‰“åŒ…fæ˜¾ç¤ºå‹ç¼©è¿‡ç¨‹ã€‚taræ˜¯åŒ…ï¼Œgzæ˜¯å‹ç¼©æ ¼å¼
+#tar -tar -zxvf in.tar.gz//è§£å‹å‘½ä»¤
 
-rpm -qa|grep telnet    ²é¿´Ö¸¶¨Èí¼şÊÇ·ñ°²×°
 
-yum list|grep telnet   yum²é¿´ÊÇ·ñ°²×°ÁËtelnet  ºóÃæÊÇ@baseÔòÊÇ°²×°ÁË£¬ºóÃæÊÇbaseÔòÊÇÃ»ÓĞ°²×°
+
+////////////////å®‰è£…telnetæœåŠ¡å™¨å’Œå®¢æˆ·ç«¯////////////////////////////////////
+
+rpm -qa|grep telnet    æŸ¥çœ‹æŒ‡å®šè½¯ä»¶æ˜¯å¦å®‰è£…
+
+yum list|grep telnet   yumæŸ¥çœ‹æ˜¯å¦å®‰è£…äº†telnet  åé¢æ˜¯@baseåˆ™æ˜¯å®‰è£…äº†ï¼Œåé¢æ˜¯baseåˆ™æ˜¯æ²¡æœ‰å®‰è£…
 yum install telnet     
-yum install telnet-server   °²×°telnet-server
-vi /etc/xinetd.d/telnet  ĞŞ¸ÄÅäÖÃÎÄ¼ş½«¡±disable= yes¡±¸Ä³É¡± disable=no¡±
-service xinetd restart ÖØÆôtelnet·şÎñÆ÷
+yum install telnet-server   å®‰è£…telnet-server
+vi /etc/xinetd.d/telnet  ä¿®æ”¹é…ç½®æ–‡ä»¶å°†â€disable= yesâ€æ”¹æˆâ€ disable=noâ€
+service xinetd restart é‡å¯telnetæœåŠ¡å™¨
 iptables -I INPUT -p tcp --dport 23 -jACCEPT
 iptables -I INPUT -p udp --dport 23 -jACCEPT  
 service iptables save
 service iptables restart
 service telnet status
-service iptables status  ÅäÖÃ±£´æÖØÆô²é¿´·À»ğÇ½
-telnet 127.0.0.1 22 ²âÊÔtelnet³É¹¦
+service iptables status  é…ç½®ä¿å­˜é‡å¯æŸ¥çœ‹é˜²ç«å¢™
+telnet 127.0.0.1 22 æµ‹è¯•telnetæˆåŠŸ
 
 
-////////////////////////////iptables ½â¶Á/////////////////////////////
-# iptables -vnL  ²é¿´iptable ×´Ì¬
-Chain INPUT (policy ACCEPT 0 packets, 0 bytes)     policy ACCEPT Ä¬ÈÏ²ßÂÔÎª½ÓÊÜ
+////////////////////////////iptables è§£è¯»/////////////////////////////
+# iptables -vnL  æŸ¥çœ‹iptable çŠ¶æ€
+Chain INPUT (policy ACCEPT 0 packets, 0 bytes)     policy ACCEPT é»˜è®¤ç­–ç•¥ä¸ºæ¥å—
  pkts bytes target     prot opt in     out     source               destination         
     0     0 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0           udp dpt:23 
     0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0           tcp dpt:23 
@@ -149,50 +149,55 @@ Chain INPUT (policy ACCEPT 0 packets, 0 bytes)     policy ACCEPT Ä¬ÈÏ²ßÂÔÎª½ÓÊÜ
     1    52 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0           state NEW tcp dpt:22 
     6   468 REJECT     all  --  *      *       0.0.0.0/0            0.0.0.0/0           reject-with icmp-host-prohibited 
 
-1.½ÓÊÜudpĞ­ÒéÀ´Ô´µØÖ·ÊÇËùÓĞÄ¿µÄµØÖ·ÊÇËùÓĞ·ÃÎÊ¶Ë¿ÚÊÇ23 µÄËùÓĞÇëÇó¡£
-2.½ÓÊÜtcpĞ­ÒéÀ´Ô´µØÖ·ÊÇËùÓĞÄ¿µÄµØÖ·ÊÇËùÓĞ·ÃÎÊ¶Ë¿ÚÊÇ23 µÄËùÓĞÇëÇó¡£
-3.ÔÊĞí½øÈëµÄÊı¾İ°üÖ»ÄÜÊÇ¸Õ¸ÕÎÒ·¢³öÈ¥µÄÊı¾İ°üµÄ»ØÓ¦£¬ESTABLISHED£ºÒÑ½¨Á¢µÄÁ´½Ó×´Ì¬¡£RELATED£º¸ÃÊı¾İ°üÓë±¾»ú·¢³öµÄÊı¾İ°üÓĞ¹Ø¡£
-4.»·»Ø½Ó¿Úlo,ÒâË¼ÊÇËùÓĞ´Ólo¿Ú½ø³öµÄÊı¾İÈ«²¿½ÓÊÜ,ÕâÌõ¹æÔò±ØĞë¿ªÆô,¼ì²âping localhost¡£»Ø»·½Ó¿Ú¼´×Ô¼º¸ø×Ô¼º·¢Êı¾İµÄ½Ó¿Ú
-5.½ÓÊÜËùÓĞtcpĞ­ÒéÀ´Ô´µØÖ·ÊÇËùÓĞ£¬Ä¿µÄµØÖ·ÊÇËùÓĞ·ÃÎÊ¶Ë¿ÚÊÇ22µÄËùÓĞÇëÇó
-6.¾Ü¾øËùÓĞÇëÇó
+1.æ¥å—udpåè®®æ¥æºåœ°å€æ˜¯æ‰€æœ‰ç›®çš„åœ°å€æ˜¯æ‰€æœ‰è®¿é—®ç«¯å£æ˜¯23 çš„æ‰€æœ‰è¯·æ±‚ã€‚
+2.æ¥å—tcpåè®®æ¥æºåœ°å€æ˜¯æ‰€æœ‰ç›®çš„åœ°å€æ˜¯æ‰€æœ‰è®¿é—®ç«¯å£æ˜¯23 çš„æ‰€æœ‰è¯·æ±‚ã€‚
+3.å…è®¸è¿›å…¥çš„æ•°æ®åŒ…åªèƒ½æ˜¯åˆšåˆšæˆ‘å‘å‡ºå»çš„æ•°æ®åŒ…çš„å›åº”ï¼ŒESTABLISHEDï¼šå·²å»ºç«‹çš„é“¾æ¥çŠ¶æ€ã€‚RELATEDï¼šè¯¥æ•°æ®åŒ…ä¸æœ¬æœºå‘å‡ºçš„æ•°æ®åŒ…æœ‰å…³ã€‚
+4.ç¯å›æ¥å£lo,æ„æ€æ˜¯æ‰€æœ‰ä»loå£è¿›å‡ºçš„æ•°æ®å…¨éƒ¨æ¥å—,è¿™æ¡è§„åˆ™å¿…é¡»å¼€å¯,æ£€æµ‹ping localhostã€‚å›ç¯æ¥å£å³è‡ªå·±ç»™è‡ªå·±å‘æ•°æ®çš„æ¥å£
+5.æ¥å—æ‰€æœ‰tcpåè®®æ¥æºåœ°å€æ˜¯æ‰€æœ‰ï¼Œç›®çš„åœ°å€æ˜¯æ‰€æœ‰è®¿é—®ç«¯å£æ˜¯22çš„æ‰€æœ‰è¯·æ±‚
+6.æ‹’ç»æ‰€æœ‰è¯·æ±‚
 
-×¢Òâ£ºÆ¥Åä¹æÔòÊÇÖØÉÏÍùÏÂÆ¥Åä
-³£ÓÃÅäÖÃ£º
+æ³¨æ„ï¼šåŒ¹é…è§„åˆ™æ˜¯é‡ä¸Šå¾€ä¸‹åŒ¹é…
+å¸¸ç”¨é…ç½®ï¼š
 iptables -I INPUT -p tcp --dport 21 -j ACCEPT
 iptables -I INPUT -p tcp --dport 23 -jACCEPT
 iptables -I INPUT -p udp --dport 23 -jACCEPT  
-iptables -A INPUT -m state ¨Cstate NEW -m tcp -p tcp ¨Cdport 80 -j ACCEPT£¨ÔÊĞí80¶Ë¿ÚÍ¨¹ı·À»ğÇ½£©
+iptables -A INPUT -m state â€“state NEW -m tcp -p tcp â€“dport 80 -j ACCEPTï¼ˆå…è®¸80ç«¯å£é€šè¿‡é˜²ç«å¢™ï¼‰
 # iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
 service iptables save
 service iptables restart
 
 /////////////////////////////////////////
-whereis vsftpd ²é¿´vsftpdÎÄ¼ş´æ·ÅµÄÎ»ÖÃ
+whereis vsftpd æŸ¥çœ‹vsftpdæ–‡ä»¶å­˜æ”¾çš„ä½ç½®
 whereis vsftpd
 
 
 
-//////////////////////°²×°Nginx////////////////////////
-https://www.cnblogs.com/taiyonghai/p/6728707.html  ¸Ã²©¿ÍÖĞÓĞ¼ÇÂ¼
-µ«ÊÇ°²×°Ê±Ò»¶¨ÒªÓÃ --prefixÖ¸¶¨Ä¿Â¼£¬Òª²»È»Ğ¶ÔØµÄÊÇºó²»ºÃĞ¶ÔØ¡£Èç£º
+//////////////////////å®‰è£…Nginx////////////////////////
+https://www.cnblogs.com/taiyonghai/p/6728707.html  è¯¥åšå®¢ä¸­æœ‰è®°å½•
+ä½†æ˜¯å®‰è£…æ—¶ä¸€å®šè¦ç”¨ --prefixæŒ‡å®šç›®å½•ï¼Œè¦ä¸ç„¶å¸è½½çš„æ˜¯åä¸å¥½å¸è½½ã€‚å¦‚ï¼š
 $ ./configure --prefix=/tmp/to_remove && make install
 
-1¡¢./config --prefix=/home/nginx/opensslInstall && make && make install
-2¡¢./configure --prefix=/home/nginx/pcreInstall && make && make install
-3¡¢./configure --prefix=/home/nginx/zlibInstall && make && make install
-4¡¢./configure --prefix=/home/nginx/nginxInstall --with-pcre=/home/nginx/pcre-8.40  && make && make install
-   --with-pcre=/home/nginx/pcre-8.40 Ö¸¶¨pcreÔ´Âë°üµØÖ·
-5¡¢/home/nginx/nginxInstall/sbin/nginx -v ²é¿´Nginx°æ±¾
+1ã€./config --prefix=/home/nginx/opensslInstall && make && make install
+2ã€./configure --prefix=/home/nginx/pcreInstall && make && make install
+3ã€./configure --prefix=/home/nginx/zlibInstall && make && make install
+4ã€./configure --prefix=/home/nginx/nginxInstall --with-pcre=/home/nginx/pcre-8.40  && make && make install
+   --with-pcre=/home/nginx/pcre-8.40 æŒ‡å®špcreæºç åŒ…åœ°å€
+5ã€/home/nginx/nginxInstall/sbin/nginx -v æŸ¥çœ‹Nginxç‰ˆæœ¬
 
 
 
-///////////////////////×Ô¼ºµçÄÔÅäÖÃÓòÃûÓ³Éä////////////////////////////////////////
+///////////////////////è‡ªå·±ç”µè„‘é…ç½®åŸŸåæ˜ å°„////////////////////////////////////////
 
-1¡¢ÔÚCÅÌËÑË÷hosts
+1ã€åœ¨Cç›˜æœç´¢hosts
 
-2¡¢ÕÒµ½C:\Windows\System32\drivers\etc  
+2ã€æ‰¾åˆ°C:\Windows\System32\drivers\etc  
 
-3¡¢µã»÷´ò¿ªÔÚ×îÏÂ·½¼ÓÉÏ***.***.**.*** t.test.com  ¼´¿É
+3ã€ç‚¹å‡»æ‰“å¼€åœ¨æœ€ä¸‹æ–¹åŠ ä¸Š***.***.**.*** t.test.com  å³å¯
 
 
 
+////////////////////springbooté¡¹ç›®å¯åŠ¨æ–¹å¼///////////////////////////////////////
+
+java -jar -Dserver.port=10000 -Dlogging.path=/var/logs xxx.jar &    -- é»˜è®¤åœ¨/var/logs/ç”Ÿæˆspring.logæ–‡ä»¶  
+  
+java -jar -Dserver.port=10001 -Dlogging.file=/var/logs/yyy.log yyy.jar &  //å¯åŠ¨æ—¶åˆ¶å®šç«¯å£æ—¶10001 åˆ¶å®šæ—¥å¿—æ–‡ä»¶ä½ç½®æ˜¯/var/logs/yyy.log
