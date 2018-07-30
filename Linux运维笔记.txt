@@ -201,3 +201,5 @@ $ ./configure --prefix=/tmp/to_remove && make install
 java -jar -Dserver.port=10000 -Dlogging.path=/var/logs xxx.jar &    -- 默认在/var/logs/生成spring.log文件  
   
 java -jar -Dserver.port=10001 -Dlogging.file=/var/logs/yyy.log yyy.jar &  //启动时制定端口时10001 制定日志文件位置是/var/logs/yyy.log
+
+java -Xms256m -Xmx512m -jar yyy.jar & //增加了启动时虚拟机内存的指定
