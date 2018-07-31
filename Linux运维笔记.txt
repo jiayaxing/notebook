@@ -115,7 +115,7 @@ service vsftpd status 查看是否启动
 
 #tar -zcvf in.tar.gz install.log install.log.syslog//压缩命令   tar包命令  z制定格式压缩时代表压缩成gz格式解压时代表被解压的包的格式为gz，
                                                    //c压缩x解压v打包f显示压缩过程。tar是包，gz是压缩格式
-#tar -tar -zxvf in.tar.gz//解压命令
+#tar -zxvf in.tar.gz//解压命令
 
 
 
@@ -210,3 +210,27 @@ java -Xms256m -Xmx512m -jar yyy.jar & //增加了启动时虚拟机内存的指�
 //////////////////////sudo文件授权配置//////////////////////////////////////
 //详情见这篇文章
 https://www.cnblogs.com/ImJerryChan/p/6667819.html
+
+
+/////////////////////nginx用root权限安装，用普通用户启动普通用户的网站的方法/////////////////////////////////
+
+1、用root用户安装Nginx
+2、用root用户的visudo命令修改Nginx的启动命令可以让普通用户执行。即将Nginx的启动命令授权给普通用户。
+   在 root ALL=(ALL) ALL的下面增加如下语句
+   jiayaxing01 ALL=(root) /home/nginx/nginxInstall/sbin/nginx
+   
+3、用root用户修改Nginx的配置文件，调整网站地址为普通用户下的网站地址。
+	location / {
+            root   /home/jiayaxing01/myweb/dist;
+            index  index.html index.htm;
+        }
+
+4、用普通用户上传网站文件，并授权文件相应的目录为其他组用户可执行权限。(包括文件目录、用户目录等)
+   chmod o+x dist;    chmod o+x jiayaxing01;
+   
+5、用普通用户的sudo方式启动Nginx的启动命令
+  sudo /home/nginx/nginxInstall/sbin/nginx
+  
+  
+  这样Nginx就可以用普通用户控制并且有1024以下端口的权限了
+
