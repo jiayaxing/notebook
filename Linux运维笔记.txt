@@ -69,7 +69,7 @@ useradd jiayaxing01 -g develop  给develop用户组添加一个jiayaxing01的账
 ls /home 去家目录查看确认是否增加了账号
 passwd jiayaxing01   修改账号的密码（root用户下修改别jiayaxing01的密码）
 # groups jiayaxing01
-userdel peter  删除用户
+userdel -r peter  删除用户
 groupdel peter 删除组
 chmod 766 test.txt  修改test.txt的权限为766 .自己|同组|其他组
 chmod u=rw,g=r,o=r test.txt   另一种修改权限的方式
