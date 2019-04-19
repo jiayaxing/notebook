@@ -130,6 +130,21 @@ service vsftpd status 查看是否启动
 #tar -zxvf in.tar.gz//解压命令
 
 
+////////////////jdk安装与配置/////////////////////////////////////////////////
+
+注意：因为jdk需要配置系统变量，所以安装到usr/local目录下。其他不配置系统变量的软件建议安装在opt目录下。
+
+1、在usr/local目录下新建jdk8文件夹
+2、将下载好的jdk-8u60-linux-x64.tar.gz文件上传到jdk8文件夹下（下载目录见https://blog.csdn.net/chuyouyinghe/article/details/80898750）
+3、解压该文件
+4、在/etc/profile中增加如下输出
+JAVA_HOME=/usr/java/jdk1.8.0_60
+CLASSPATH=$JAVA_HOME/lib/
+PATH=$PATH:$JAVA_HOME/bin
+export PATH JAVA_HOME CLASSPATH
+5、执行source /etc/profile命令加载profile文件
+6、执行java -version命令查看是否安装成功
+
 
 ////////////////安装telnet服务器和客户端////////////////////////////////////
 
